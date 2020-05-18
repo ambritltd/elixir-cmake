@@ -155,5 +155,6 @@ defmodule Mix.Tasks.Compile.Cmake do
     config
     |> Mix.Project.build_path()
     |> Path.join(@default_working_dir)
+    |> Path.join("/#{config[:name]}")
   end
 end
