@@ -84,7 +84,7 @@ defmodule Mix.Tasks.Compile.Cmake do
       |> Path.expand()
 
     cmd("cmake", [cmake_lists], working_dir, env)
-    cmd("make", make_targets, working_dir, env)
+    cmd("cmake", "--build", ".")
 
     Mix.Project.build_structure()
 
